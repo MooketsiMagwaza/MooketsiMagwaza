@@ -80,7 +80,7 @@ Docker · nginx · Prometheus · Grafana
 ### [Tsela — Gaborone transit, made searchable](https://github.com/MooketsiMagwaza/transit-route-optimization)
 
 <a href="https://github.com/MooketsiMagwaza/transit-route-optimization">
-  <img src="https://raw.githubusercontent.com/MooketsiMagwaza/MooketsiMagwaza/main/assets/tsela/tsela-rider-routes.png" alt="Tsela rider app in a Mac window: every mapped route in Gaborone, with search and a route list" width="100%">
+  <img src="https://raw.githubusercontent.com/MooketsiMagwaza/MooketsiMagwaza/main/assets/tsela/tsela-surfaces.png" alt="Tsela's four surfaces in Mac windows: the rider app exploring every route, the marketing site, the admin dashboard, and the developer portal's API console" width="100%">
 </a>
 
 Tsela turns Gaborone's informal combi knowledge into a route-planning platform.
