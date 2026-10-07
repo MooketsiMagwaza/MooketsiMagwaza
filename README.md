@@ -95,27 +95,6 @@ follow guided learning paths, or wander an open map one connection at a time.
 
 **Core stack:** React · TypeScript · Vite · Tauri 2
 
-### [Obsidian Sync for iOS — local-first vault synchronization](https://github.com/MooketsiMagwaza/obsidian-sync-ios)
-
-<a href="https://github.com/MooketsiMagwaza/obsidian-sync-ios">
-  <img src="https://raw.githubusercontent.com/MooketsiMagwaza/obsidian-sync-ios/main/docs/images/vault-sync-active-session.jpg" alt="Obsidian Sync transferring an established vault on a physical iPad" width="100%">
-</a>
-
-A free, open-source iPhone and iPad companion that joins an existing Syncthing
-cluster and synchronizes an Obsidian vault without a hosted account or proprietary
-sync service.
-
-- A narrow Go/Swift boundary embeds the real Syncthing engine inside a native
-  SwiftUI application.
-- Physical testing proved desktop-to-iPad and iPad-to-desktop transfers, including
-  a deletion propagated back to the desktop.
-- GitHub Actions cross-compiles the XCFramework, builds the iOS app, runs the
-  linked simulator suite, and publishes an unsigned device IPA.
-- The README clearly labels it a foreground-only development release and documents
-  backups, signing, conflict, permission, and long-session risks.
-
-**Core stack:** Go · Swift · SwiftUI · Syncthing · GitHub Actions
-
 ## Other technical work
 
 | Project | Why it exists |
@@ -150,8 +129,6 @@ sync service.
 - **Zenith Agent:** bring it back up to the standard of Zenith, with screenshots and
   a written note of what has and hasn't been tested.
 - **Orb View:** write more concepts in depth and keep the content checks strict.
-- **Obsidian Sync for iOS:** keep pushing on interrupted transfers, conflicts,
-  permissions and bigger vaults.
 
 ## Let's talk
 
