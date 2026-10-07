@@ -43,7 +43,7 @@ deliberate-practice timer, a deck and card workspace, a markdown journal,
 reminders, and a full-screen Zen mode share one quiet, dark surface.
 
 - **Local-first.** State lives in the browser and the app loads as a static page.
-  Optional accounts add sync across devices.
+  There is no server and no account.
 - **One target, one document.** Every card and every deck has exactly one journal,
   and the data layer enforces it.
 - **Recoverable.** Every delete returns an undo handle, including a deck with its
@@ -53,7 +53,7 @@ reminders, and a full-screen Zen mode share one quiet, dark surface.
 - **Specified down to the key.** The README is the full specification: every
   screen, keystroke, storage key, and design token.
 
-**Core stack:** React · TypeScript · TanStack · Tailwind CSS · Supabase (optional accounts)
+**Core stack:** React · TypeScript · TanStack · Tailwind CSS
 
 ### [Zenith Agent — time tracking as a resident desktop agent](https://github.com/MooketsiMagwaza/zenith-agent)
 
