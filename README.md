@@ -67,8 +67,9 @@ window that Alt+Space summons.
   where the window is transparent.
 - **Layers kept apart.** The main process, the preload bridge, and the renderer
   are separate, with shared types in one place.
-- **Honest status.** It is a work in progress that I am bringing back up to the
-  standard of my other projects, and it has no screenshots yet.
+- **Honest status.** It is a work in progress with no screenshots yet. I am
+  rebuilding it as a small Tauri 2 pop-up inside the Zenith repository, so this
+  Electron version is the prototype.
 
 **Core stack:** Electron · React · TypeScript · electron-vite · Tailwind CSS
 
@@ -94,6 +95,43 @@ follow guided learning paths, or wander an open map one connection at a time.
   desktop app.
 
 **Core stack:** React · TypeScript · Vite · Tauri 2
+
+### In development
+
+Two new projects, both early prototypes. Their repositories are private for now, so
+there are no links or screenshots yet.
+
+#### Tagwise — a shared register for an organisation's assets and stock
+
+For schools, clinics, offices, and stores that keep their register in a spreadsheet.
+The aim: scan QR codes and barcodes in the browser, count stock together, bring in
+Excel and CSV files, and see sites on a map.
+
+- **Built so far, in a browser prototype.** A register table with saved views, asset
+  pages with comments and history, printable QR label sheets, scanning with a
+  manual-entry fallback, and an Excel and CSV import wizard that checks each row and
+  reports the problems.
+- **Honest status.** It runs on a sample workspace in the browser's own storage.
+  Camera scanning has not been tried on a real phone, and it is not deployed yet.
+
+**Core stack:** React · TypeScript · Vite
+
+#### Kori — an offline-first safari and wildlife app for Botswana
+
+Named after the kori bustard, Botswana's national bird. The aim: log a sighting with
+no mobile signal, download park maps before the trip, and be guided to a sighting
+along existing roads and tracks.
+
+- **Safety and privacy first.** No live animal locations: others see a sighting only
+  after review and a delay, as an area. Sensitive species are shown coarsely and are
+  never guided to. GPS trip recording is opt-in.
+- **Built so far, in a browser prototype.** Logging a sighting on the phone's own
+  storage, a sample park map drawn without any tiles, routing along tracks, and QR
+  codes that share a sighting from phone to phone.
+- **Honest status.** The park in it is fictional sample data. The review console, the
+  API, and real park maps are not built, and it has not been tried on a real phone.
+
+**Core stack:** Next.js · TypeScript · MapLibre · IndexedDB
 
 ## Other technical work
 
@@ -126,8 +164,11 @@ follow guided learning paths, or wander an open map one connection at a time.
 
 ## Next up
 
-- **Zenith Agent:** bring it back up to the standard of Zenith, with screenshots and
-  a written note of what has and hasn't been tested.
+- **Zenith:** one React app that runs in a browser and as a Tauri desktop app, a
+  marketing site, and device-to-device sync on the local network with no account.
+  The sync is designed and not built.
+- **Tagwise and Kori:** deploy both, try scanning and the maps on real phones, and
+  review the code before making either repository public.
 - **Orb View:** write more concepts in depth and keep the content checks strict.
 
 ## Let's talk
