@@ -44,6 +44,8 @@ reminders, and a full-screen Zen mode share one quiet, dark surface.
 
 - **Local-first.** State lives in the browser and the app loads as a static page.
   There is no server and no account.
+- **Open source.** MIT licensed, in one repository with the app, a Tauri desktop
+  build, a small pop-up, and a marketing site.
 - **One target, one document.** Every card and every deck has exactly one journal,
   and the data layer enforces it.
 - **Recoverable.** Every delete returns an undo handle, including a deck with its
