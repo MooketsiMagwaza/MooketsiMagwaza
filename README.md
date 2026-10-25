@@ -57,8 +57,8 @@ reminders, and a full-screen Zen mode share one quiet, dark surface.
   machine: device identity, a change store, a merge model chosen by measuring
   Automerge against Yjs, SPAKE2 pairing, and a pinned mutual-TLS transport. It is not
   in the app yet and has had no independent security review.
-- **Honest status.** Nobody has opened the desktop window yet, and the sync has
-  never run across two real machines.
+- **Honest status.** The desktop build compiles but has had little real-world
+  testing, and the sync has only run in tests on one machine.
 
 **Core stack:** React · TypeScript · TanStack · Tailwind CSS · Tauri 2 · Rust
 
