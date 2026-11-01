@@ -43,9 +43,7 @@ opportunities.
 
 <table>
   <tr>
-    <td width="33%"><img src="https://raw.githubusercontent.com/MooketsiMagwaza/MooketsiMagwaza/main/assets/kori/kori-home-phone.webp" alt="Kori home screen in an iPhone frame" width="100%"></td>
-    <td width="33%"><img src="https://raw.githubusercontent.com/MooketsiMagwaza/MooketsiMagwaza/main/assets/kori/kori-log-phone.webp" alt="Kori log-a-sighting screen in an iPhone frame" width="100%"></td>
-    <td width="33%"><img src="https://raw.githubusercontent.com/MooketsiMagwaza/MooketsiMagwaza/main/assets/kori/kori-sightings-phone.webp" alt="Kori sightings list in an iPhone frame" width="100%"></td>
+    <td><img src="https://raw.githubusercontent.com/MooketsiMagwaza/MooketsiMagwaza/main/assets/kori/kori-flow.webp" alt="Kori's offline field flow shown across Home, Log a sighting, and Sightings iPhone screens" width="100%"></td>
   </tr>
 </table>
 
@@ -136,7 +134,7 @@ organisation shown in the product is a fictional sample.
 | Docs | Fumadocs, with an OpenAPI reference generated from the services |
 | Delivery | GitHub Actions (lint, type-check, tests, build, compose validation, database tests), Dependabot |
 
-### [Opaline — an acrylic launcher for Windows](https://github.com/MooketsiMagwaza/opaline)
+### [Opaline — a local-first productivity workspace for Windows](https://github.com/MooketsiMagwaza/opaline)
 
 <table>
   <tr>
@@ -149,10 +147,11 @@ organisation shown in the product is a fictional sample.
   </tr>
 </table>
 
-Opaline makes a crowded Windows desktop easier to use without moving the files on it or
-replacing the Windows shell. A hotkey opens a full-screen acrylic layer with virtual
-panes, searchable installed apps, custom home screens, a taskbar mirror, local screen-time
-totals and focus tools.
+Opaline turns a crowded Windows desktop into one purpose-built productivity workspace.
+A hotkey opens a full-screen acrylic layer that brings together organised Desktop panes,
+custom home screens, a searchable installed-app library, and a mirror of pinned and
+running apps. Local screen-time history, a configurable Pomodoro timer, Zen prompts, and
+an optional calm screen saver make it a workspace for both organisation and attention.
 
 - **Safe file boundary.** Opaline reads the Desktop but never moves, renames or deletes
   its files. It makes no network requests.
@@ -173,7 +172,7 @@ totals and focus tools.
 | Verification | Vitest, Rust unit tests, documented Windows acceptance checks |
 | Delivery | NSIS, MSI, portable ZIP, SHA-256 checksums |
 
-### [University CS Docs — an open learning platform](https://university-cs-docs.vercel.app)
+### [University CS Docs — a guided computer-science learning platform](https://university-cs-docs.vercel.app)
 
 <table>
   <tr>
@@ -186,11 +185,16 @@ totals and focus tools.
   </tr>
 </table>
 
-University CS Docs puts course notes, code, quizzes and study tools for University of
-Botswana computer-science students in one deployed site. Course material is built from
-reusable MDX components so contributors can add content without rebuilding the platform.
+University CS Docs is a course-from-scratch teaching platform for University of Botswana
+computer-science students, inspired by the guided learning style of Debbie Stokes and
+Khan Academy. A course develops concepts in sequence, then gives learners worked examples,
+browser-based code practice, cheat sheets, flashcards, quizzes, chapter assessments,
+resources, and a focus timer. CSI243 Functional Programming demonstrates the complete
+model with a beginner-first Haskell course from core ideas through practical problem solving.
 
-- Next.js and MDX course pages, semester views, quizzes and a focus timer.
+- Next.js and MDX course pages with reusable lesson, navigation, practice and review components.
+- Runnable browser playgrounds for Haskell, Python, JavaScript, Java, SQL, HTML and CSS.
+- Flashcards, quizzes, chapter assessments, cheat sheets, resources, progress and focus tools.
 - Public contribution guidance and project governance alongside the course material.
 - GitHub Actions, CodeQL and dependency review on changes.
 - Open-source repository: [MooketsiMagwaza/university-cs-docs](https://github.com/MooketsiMagwaza/university-cs-docs).
