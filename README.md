@@ -11,6 +11,7 @@ Based in **Gaborone, Botswana**. Open to backend, full-stack, and platform-focus
 opportunities.
 
 [Portfolio](https://mooketsimagwaza.github.io/portfolio/) ·
+[Project CV (PDF)](https://mooketsimagwaza.github.io/portfolio/Mooketsi-Magwaza-CV.pdf) ·
 [Email me](mailto:mooketsimagwazajr@gmail.com) ·
 [View my repositories](https://github.com/MooketsiMagwaza?tab=repositories)
 
@@ -41,15 +42,21 @@ opportunities.
 
 Named after the kori bustard, Botswana's national bird. Log a sighting with no mobile
 signal, download park maps before the trip, and be guided to a sighting along existing
-roads and tracks. The park shown is a fictional sample reserve.
+roads and tracks. The public screens use a labelled fictional sample reserve. A private
+Savuti pack built from OpenStreetMap and Sentinel-2 data is kept off the public site while
+the relevant wildlife authority is consulted.
 
 - **Safety and privacy by design.** No live animal locations: others see a sighting only
   after review and a delay, as an area. Sensitive species are shown coarsely and are
   never guided to. GPS trip recording is opt-in per trip, trimmed, delayed, and deletable.
 - **Four web apps.** A phone-first field app (an IndexedDB outbox, a downloaded park pack
-  drawn with MapLibre without any tiles, routing along tracks only, QR share and scan), a
+  drawn locally from PMTiles with MapLibre, routing along tracks only, QR share and scan), a
   landing site, a review console, and an API docs site generated from the service's
   OpenAPI document.
+- **A real offline map, privately verified.** The Savuti pack combines an OpenStreetMap
+  vector base and routing graph with Sentinel-2 satellite imagery. Its satellite-first
+  view, OSM-track routing, attribution, pack storage, and offline reload passed 16 of 16
+  automated checks. The pack and its screenshots are not published.
 - **A real backend.** A Python service with accounts, scoped API keys and quotas,
   throttling, an audit log, uploads, a review flow, trips and a track map, and 13 database
   migrations on PostGIS. It has 93 passing tests and runs in CI against a PostGIS service.
@@ -86,6 +93,9 @@ For schools, clinics, offices, and stores that keep their register in a spreadsh
 QR codes and barcodes in the browser, print labels, count stock together, bring in Excel
 and CSV files, and see sites on a map. The organisation shown is a fictional sample.
 
+- **A flat Apple-style interface.** System-like surfaces, grouped lists, hairline borders,
+  one accent, and no decorative gradients keep the data-dense workspace calm on desktop
+  and phone.
 - **The register.** Saved views, filters and sorting, asset and stock pages with check-out,
   issue and receive, comments, history, and roles; edits made from an out-of-date copy open
   a conflict dialog instead of overwriting.
@@ -184,7 +194,7 @@ full-screen Zen mode share one quiet, dark surface.
 
 ## Next up
 
-- **Kori and Tagwise:** connect each app to its backend, deploy both, try scanning and the maps on real phones, and have the code reviewed by someone independent. Kori is also getting a real offline map in place of its illustrated sample reserve.
+- **Kori and Tagwise:** connect each app to its backend, deploy both, try scanning and the maps on real phones, and have the code reviewed by someone independent. Kori's real Savuti pack is built and proven in automated offline checks, but still needs a real-phone pass and must remain private pending wildlife-authority guidance.
 - **Zenith:** put the sync engine inside the app, run it across two real machines, and have the transport reviewed by someone independent.
 
 ## Let's talk
