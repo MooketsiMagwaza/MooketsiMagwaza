@@ -26,25 +26,43 @@ opportunities.
 - **Production foundations** — observability, rate limits, security boundaries,
   recovery documentation, and deployment workflows that make a system operable.
 
+### Experience and searchable keywords
+
+`Full-stack engineering` · `backend engineering` · `platform engineering` ·
+`product engineering` · `system design` · `REST APIs` · `offline-first` ·
+`local-first` · `geospatial systems` · `inventory management` ·
+`expiry tracking` · `spreadsheet import/export` · `QR and barcode scanning` ·
+`authentication and authorization` · `data integrity` · `observability` ·
+`CI/CD` · `backup and recovery`
+
+**Languages and frameworks:** TypeScript, JavaScript, React, Next.js, Vite,
+Rust, Axum, Python, FastAPI, SQL, Go and Java. **Data and infrastructure:**
+PostgreSQL, PostGIS, Redis, SQLAlchemy, sqlx, Alembic, Docker, nginx, GitHub
+Actions, OpenTelemetry, Prometheus, Grafana, Tempo, MapLibre, PMTiles and
+IndexedDB.
+
 ## Selected work
 
 ### [Kori — an offline-first safari and wildlife app for Botswana](https://github.com/MooketsiMagwaza/kori)
 
 <table>
   <tr>
-    <td width="50%"><img src="https://raw.githubusercontent.com/MooketsiMagwaza/MooketsiMagwaza/main/assets/kori/kori-landing.webp" alt="The Kori landing page: a headline about wildlife sightings that keep working where the signal ends, with a phone showing a route along tracks" width="100%"></td>
-    <td width="50%"><img src="https://raw.githubusercontent.com/MooketsiMagwaza/MooketsiMagwaza/main/assets/kori/kori-review.webp" alt="The Kori review console: a queue of waiting sightings with a map of the selected sighting's one-kilometre area" width="100%"></td>
+    <td colspan="2"><img src="https://raw.githubusercontent.com/MooketsiMagwaza/MooketsiMagwaza/main/assets/kori/kori-map.webp" alt="Kori map preview showing real Sentinel-2 imagery and OpenStreetMap labels over Maun at the Okavango Delta gateway, with a highlighted route, offline packs, track-based guidance and location privacy" width="100%"></td>
   </tr>
   <tr>
-    <td colspan="2"><img src="https://raw.githubusercontent.com/MooketsiMagwaza/MooketsiMagwaza/main/assets/kori/kori-phones.webp" alt="Three phones showing the Kori field app: the home screen, the offline map with sighting markers and tracks, and the form for logging a sighting" width="100%"></td>
+    <td width="50%"><img src="https://raw.githubusercontent.com/MooketsiMagwaza/MooketsiMagwaza/main/assets/kori/kori-home.webp" alt="The Kori field app home screen on a wide display, with shortcuts to log a sighting, open the map, scan a shared sighting and see what is stored on the phone" width="100%"></td>
+    <td width="50%"><img src="https://raw.githubusercontent.com/MooketsiMagwaza/MooketsiMagwaza/main/assets/kori/kori-log.webp" alt="The Kori phone form for logging a sighting, beginning with a searchable grid of Botswana wildlife species" width="100%"></td>
   </tr>
 </table>
 
-Named after the kori bustard, Botswana's national bird. Log a sighting with no mobile
-signal, download park maps before the trip, and be guided to a sighting along existing
-roads and tracks. The public screens use a labelled fictional sample reserve. A private
-Savuti pack built from OpenStreetMap and Sentinel-2 data is kept off the public site while
-the relevant wildlife authority is consulted.
+Kori addresses two Botswana-specific constraints that ordinary map and social apps
+handle poorly: safari routes lose mobile coverage, and publishing an animal's exact live
+location can be unsafe. It records a sighting offline, keeps it on the phone until a
+connection returns, and separates a private observation from the delayed, coarse area
+that may safely be shared. The public map visual above uses real Sentinel-2 and
+OpenStreetMap context over Maun at the Okavango Delta gateway and contains no live wildlife locations; the private
+Savuti pack and its screenshots remain off the web while the relevant wildlife authority
+is consulted.
 
 - **Safety and privacy by design.** No live animal locations: others see a sighting only
   after review and a delay, as an area. Sensitive species are shown coarsely and are
@@ -89,9 +107,14 @@ the relevant wildlife authority is consulted.
   </tr>
 </table>
 
-For schools, clinics, offices, and stores that keep their register in a spreadsheet. Scan
-QR codes and barcodes in the browser, print labels, count stock together, bring in Excel
-and CSV files, and see sites on a map. The organisation shown is a fictional sample.
+Tagwise started when my sister needed a practical way to track pharmacy expiry dates,
+batches and bulk stock without paying for a desktop point-of-sale subscription plus
+separate extensions. It keeps the familiar Excel-like table and import/export workflow,
+then adds expiry alerts, QR and barcode scanning, printable labels, stock history,
+multi-person stock-takes, roles and site maps. It runs in the browser rather than requiring
+a dedicated desktop client. The long-term goal is an open-source alternative, but the
+public repository is still all rights reserved until a licence is selected. The
+organisation shown in the product is a fictional sample.
 
 - **A flat Apple-style interface.** System-like surfaces, grouped lists, hairline borders,
   one accent, and no decorative gradients keep the data-dense workspace calm on desktop
@@ -103,6 +126,9 @@ and CSV files, and see sites on a map. The organisation shown is a fictional sam
   sheets.
 - **Import and export.** An Excel and CSV import wizard that matches columns, checks every
   row, handles duplicates, and writes a problem report.
+- **Expiry and batch control.** Stock lines store batch and expiry dates; the register
+  highlights near-expiry and expired dates, the dashboard calls out expiring batches, and
+  a saved view isolates stock approaching expiry.
 - **Stock-takes** several people can run at once, and a map of sites.
 - **Five Rust services.** Identity, register, notifications, media, and ops, each with its
   own database and migrations, behind an nginx gateway. The register service's database
@@ -121,55 +147,64 @@ and CSV files, and see sites on a map. The organisation shown is a fictional sam
 | Docs | Fumadocs, with an OpenAPI reference generated from the services |
 | Delivery | GitHub Actions (lint, type-check, tests, build, compose validation, database tests), Dependabot |
 
-### [Zenith — time tracking with intention](https://github.com/MooketsiMagwaza/Zenith)
+### [Opaline — an acrylic launcher for Windows](https://github.com/MooketsiMagwaza/opaline)
 
 <table>
   <tr>
-    <td width="50%"><img src="https://raw.githubusercontent.com/MooketsiMagwaza/MooketsiMagwaza/main/assets/zenith/zenith-decks.webp" alt="Zenith's decks view on a black canvas: a deck called Academics with three timed cards" width="100%"></td>
-    <td width="50%"><img src="https://raw.githubusercontent.com/MooketsiMagwaza/MooketsiMagwaza/main/assets/zenith/zenith-journal.webp" alt="Zenith's markdown journal, one document per card or deck" width="100%"></td>
+    <td width="50%"><img src="https://raw.githubusercontent.com/MooketsiMagwaza/MooketsiMagwaza/main/assets/opaline/opaline-home.webp" alt="Opaline Home with organised desktop panes and a bottom taskbar mirror" width="100%"></td>
+    <td width="50%"><img src="https://raw.githubusercontent.com/MooketsiMagwaza/MooketsiMagwaza/main/assets/opaline/opaline-apps.webp" alt="Opaline's searchable catalogue of installed Windows apps" width="100%"></td>
   </tr>
   <tr>
-    <td width="50%"><img src="https://raw.githubusercontent.com/MooketsiMagwaza/MooketsiMagwaza/main/assets/zenith/zenith-history.webp" alt="Zenith's history of past focus sessions" width="100%"></td>
-    <td width="50%"><img src="https://raw.githubusercontent.com/MooketsiMagwaza/MooketsiMagwaza/main/assets/zenith/zenith-zen.webp" alt="Zenith's full-screen Zen mode" width="100%"></td>
+    <td width="50%"><img src="https://raw.githubusercontent.com/MooketsiMagwaza/MooketsiMagwaza/main/assets/opaline/opaline-screen-time.webp" alt="Opaline's local screen-time totals and daily chart" width="100%"></td>
+    <td width="50%"><img src="https://raw.githubusercontent.com/MooketsiMagwaza/MooketsiMagwaza/main/assets/opaline/opaline-focus.webp" alt="Opaline's focus timer and daily progress" width="100%"></td>
   </tr>
 </table>
 
-Most productivity apps are built to capture tasks or to bill time. Zenith is built for
-attention: pick one card, run a session, and write down what happened. A
-deliberate-practice timer, a deck and card workspace, a markdown journal, reminders, and a
-full-screen Zen mode share one quiet, dark surface.
+Opaline makes a crowded Windows desktop easier to use without moving the files on it or
+replacing the Windows shell. A hotkey opens a full-screen acrylic layer with virtual
+panes, searchable installed apps, custom home screens, a taskbar mirror, local screen-time
+totals and focus tools.
 
-- **Open source (MIT).** One repository holds the React app, which runs in a browser and,
-  wrapped in Tauri, on the desktop; a small always-on-top Tauri pop-up with an opt-in
-  desktop pet; a marketing site; and the sync engine.
-- **Local-first.** State lives on your device. There is no server and no account.
-- **One target, one document.** Every card and deck has exactly one journal, and the data
-  layer enforces it. Every delete returns an undo handle.
-- **Optional extras, off by default.** Goals and progress bars, companion messages
-  ("time for…"), session recaps and affirmations, a Pomodoro timer, a calendar with
-  iCalendar export, and versioned export and import in open formats (JSON, CSV, Markdown,
-  iCalendar, with Toggl and Clockify CSV importers).
-- **Sync without an account.** A Rust library gives each device its own identity and pairs
-  devices once with a code (SPAKE2), then moves changes over mutual TLS with pinned
-  certificates. Merging uses Automerge, chosen over Yjs by measuring both. It passes 36
-  tests on one machine and is not in the app yet.
+- **Safe file boundary.** Opaline reads the Desktop but never moves, renames or deletes
+  its files. It makes no network requests.
+- **Native Windows integration.** Tauri 2 and Rust handle the global hotkey, window
+  lifecycle, app catalogue, icons, taskbar state, previews and local persistence.
+- **Plain web interface.** Framework-free TypeScript and CSS render the acrylic launcher,
+  search, panes, settings, screen-time charts and focus views through WebView2.
+- **Local data.** Pane metadata, custom screens, settings and usage totals stay on the
+  computer. Window previews stay in memory.
+- **Published Windows builds.** Release v0.2.1 is available as NSIS, MSI and portable
+  packages. Remaining physical Windows checks are listed in the repository work order.
 
 | Layer | What it uses |
 | --- | --- |
-| App | React, TypeScript, Vite, TanStack Router, Tailwind CSS |
-| Desktop and pop-up | Tauri 2, Rust |
-| Sync engine | Rust, SQLite, rustls, SPAKE2, Automerge, mDNS |
-| Marketing site | React, TypeScript, Vite, prerendered to static HTML with no scripts |
-| Delivery | npm workspaces and a Cargo workspace in one repository, Netlify |
+| Interface | TypeScript, CSS, WebView2 |
+| Native backend | Tauri 2, Rust, Windows APIs |
+| Local storage | JSON metadata and WebView local storage |
+| Verification | Vitest, Rust unit tests, documented Windows acceptance checks |
+| Delivery | NSIS, MSI, portable ZIP, SHA-256 checksums |
 
-## Other technical work
+### [University CS Docs — an open learning platform](https://university-cs-docs.vercel.app)
 
-| Project | Why it exists |
-| --- | --- |
-| [University CS Docs](https://university-cs-docs.vercel.app) | A deployed, open-source learning platform for University of Botswana computer-science courses, backed by CI, CodeQL, and reusable interactive MDX components. |
-| [Zenith Agent](https://github.com/MooketsiMagwaza/zenith-agent) | The earlier Electron prototype of Zenith as a floating desktop agent. Its successor is the Tauri pop-up inside the Zenith repository. |
-| [GlassHID](https://github.com/MooketsiMagwaza/GlassHID) | Turns an Android phone into a local-only Bluetooth keyboard, trackpad, media remote, and gamepad using native HID APIs. |
-| [Obsidian Excalidraw Low Latency](https://github.com/MooketsiMagwaza/obsidian-excalidraw-low-latency) | A low-latency pen companion for handwritten work in Obsidian Excalidraw. |
+<table>
+  <tr>
+    <td width="50%"><img src="https://raw.githubusercontent.com/MooketsiMagwaza/MooketsiMagwaza/main/assets/university-cs-docs/home.webp" alt="University CS Docs home page with computer-science course cards" width="100%"></td>
+    <td width="50%"><img src="https://raw.githubusercontent.com/MooketsiMagwaza/MooketsiMagwaza/main/assets/university-cs-docs/course.webp" alt="A University CS Docs course overview with its study sequence" width="100%"></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="https://raw.githubusercontent.com/MooketsiMagwaza/MooketsiMagwaza/main/assets/university-cs-docs/semester.webp" alt="University CS Docs semester overview" width="100%"></td>
+    <td width="50%"><img src="https://raw.githubusercontent.com/MooketsiMagwaza/MooketsiMagwaza/main/assets/university-cs-docs/focus-timer.webp" alt="University CS Docs focus timer" width="100%"></td>
+  </tr>
+</table>
+
+University CS Docs puts course notes, code, quizzes and study tools for University of
+Botswana computer-science students in one deployed site. Course material is built from
+reusable MDX components so contributors can add content without rebuilding the platform.
+
+- Next.js and MDX course pages, semester views, quizzes and a focus timer.
+- Public contribution guidance and project governance alongside the course material.
+- GitHub Actions, CodeQL and dependency review on changes.
+- Open-source repository: [MooketsiMagwaza/university-cs-docs](https://github.com/MooketsiMagwaza/university-cs-docs).
 
 ## Technical toolkit
 
@@ -179,7 +214,7 @@ full-screen Zen mode share one quiet, dark surface.
 | Web | TypeScript, React, Next.js, Vite, accessible responsive UI |
 | Data | PostgreSQL, PostGIS, pgRouting, Redis, SQLAlchemy, sqlx, Alembic |
 | Operations | Docker, nginx, GitHub Actions, Prometheus, Grafana, Tempo, OpenTelemetry |
-| Native | Swift, SwiftUI, Android platform APIs, Bluetooth HID |
+| Native | Tauri 2, Rust, Windows APIs, WebView2 |
 
 ## How I work
 
@@ -191,11 +226,6 @@ full-screen Zen mode share one quiet, dark surface.
    needed before launch.
 5. Prefer a small, understandable system until measured load justifies more
    infrastructure.
-
-## Next up
-
-- **Kori and Tagwise:** connect each app to its backend, deploy both, try scanning and the maps on real phones, and have the code reviewed by someone independent. Kori's real Savuti pack is built and proven in automated offline checks, but still needs a real-phone pass and must remain private pending wildlife-authority guidance.
-- **Zenith:** put the sync engine inside the app, run it across two real machines, and have the transport reviewed by someone independent.
 
 ## Let's talk
 
