@@ -17,6 +17,17 @@ opportunities.
 
 ---
 
+## Technical toolkit
+
+| Area | Tools |
+| --- | --- |
+| **Languages** | TypeScript, JavaScript, Rust, Python, SQL, Go, Java |
+| **Frontend** | React, Next.js, Vite, responsive UI, accessibility, IndexedDB |
+| **Backend** | Axum, FastAPI, REST APIs, authentication, background jobs |
+| **Data** | PostgreSQL, PostGIS, Redis, SQLAlchemy, sqlx, Alembic |
+| **DevOps & observability** | Docker, nginx, GitHub Actions, OpenTelemetry, Prometheus, Grafana, Tempo |
+| **Native & geospatial** | Tauri 2, Windows APIs, WebView2, MapLibre, PMTiles |
+
 ## What I build
 
 - **Product systems** — web and mobile experiences designed around a real user
@@ -26,32 +37,15 @@ opportunities.
 - **Production foundations** — observability, rate limits, security boundaries,
   recovery documentation, and deployment workflows that make a system operable.
 
-### Experience and searchable keywords
-
-`Full-stack engineering` · `backend engineering` · `platform engineering` ·
-`product engineering` · `system design` · `REST APIs` · `offline-first` ·
-`local-first` · `geospatial systems` · `inventory management` ·
-`expiry tracking` · `spreadsheet import/export` · `QR and barcode scanning` ·
-`authentication and authorization` · `data integrity` · `observability` ·
-`CI/CD` · `backup and recovery`
-
-**Languages and frameworks:** TypeScript, JavaScript, React, Next.js, Vite,
-Rust, Axum, Python, FastAPI, SQL, Go and Java. **Data and infrastructure:**
-PostgreSQL, PostGIS, Redis, SQLAlchemy, sqlx, Alembic, Docker, nginx, GitHub
-Actions, OpenTelemetry, Prometheus, Grafana, Tempo, MapLibre, PMTiles and
-IndexedDB.
-
 ## Selected work
 
 ### [Kori — an offline-first safari and wildlife app for Botswana](https://github.com/MooketsiMagwaza/kori)
 
 <table>
   <tr>
-    <td colspan="2"><img src="https://raw.githubusercontent.com/MooketsiMagwaza/MooketsiMagwaza/main/assets/kori/kori-map.webp" alt="Kori map preview showing real Sentinel-2 imagery and OpenStreetMap labels over Maun at the Okavango Delta gateway, with a highlighted route, offline packs, track-based guidance and location privacy" width="100%"></td>
-  </tr>
-  <tr>
-    <td width="50%"><img src="https://raw.githubusercontent.com/MooketsiMagwaza/MooketsiMagwaza/main/assets/kori/kori-home.webp" alt="The Kori field app home screen on a wide display, with shortcuts to log a sighting, open the map, scan a shared sighting and see what is stored on the phone" width="100%"></td>
-    <td width="50%"><img src="https://raw.githubusercontent.com/MooketsiMagwaza/MooketsiMagwaza/main/assets/kori/kori-log.webp" alt="The Kori phone form for logging a sighting, beginning with a searchable grid of Botswana wildlife species" width="100%"></td>
+    <td width="33%"><img src="https://raw.githubusercontent.com/MooketsiMagwaza/MooketsiMagwaza/main/assets/kori/kori-home-phone.webp" alt="Kori home screen in an iPhone frame" width="100%"></td>
+    <td width="33%"><img src="https://raw.githubusercontent.com/MooketsiMagwaza/MooketsiMagwaza/main/assets/kori/kori-log-phone.webp" alt="Kori log-a-sighting screen in an iPhone frame" width="100%"></td>
+    <td width="33%"><img src="https://raw.githubusercontent.com/MooketsiMagwaza/MooketsiMagwaza/main/assets/kori/kori-sightings-phone.webp" alt="Kori sightings list in an iPhone frame" width="100%"></td>
   </tr>
 </table>
 
@@ -59,10 +53,8 @@ Kori addresses two Botswana-specific constraints that ordinary map and social ap
 handle poorly: safari routes lose mobile coverage, and publishing an animal's exact live
 location can be unsafe. It records a sighting offline, keeps it on the phone until a
 connection returns, and separates a private observation from the delayed, coarse area
-that may safely be shared. The public map visual above uses real Sentinel-2 and
-OpenStreetMap context over Maun at the Okavango Delta gateway and contains no live wildlife locations; the private
-Savuti pack and its screenshots remain off the web while the relevant wildlife authority
-is consulted.
+that may safely be shared. The private Savuti map pack and its screenshots remain off the
+web while the relevant wildlife authority is consulted.
 
 - **Safety and privacy by design.** No live animal locations: others see a sighting only
   after review and a delay, as an area. Sensitive species are shown coarsely and are
@@ -99,11 +91,8 @@ is consulted.
     <td width="50%"><img src="https://raw.githubusercontent.com/MooketsiMagwaza/MooketsiMagwaza/main/assets/tagwise/tagwise-register.webp" alt="The Tagwise register: a table of assets with saved views, filters, and status" width="100%"></td>
   </tr>
   <tr>
-    <td width="50%"><img src="https://raw.githubusercontent.com/MooketsiMagwaza/MooketsiMagwaza/main/assets/tagwise/tagwise-asset.webp" alt="A Tagwise asset page with its details, custody, comments, and a printable QR label" width="100%"></td>
-    <td width="50%"><img src="https://raw.githubusercontent.com/MooketsiMagwaza/MooketsiMagwaza/main/assets/tagwise/tagwise-import.webp" alt="The Tagwise import check: columns matched from an Excel file and the rows with problems listed" width="100%"></td>
-  </tr>
-  <tr>
-    <td colspan="2"><img src="https://raw.githubusercontent.com/MooketsiMagwaza/MooketsiMagwaza/main/assets/tagwise/tagwise-sites.webp" alt="The Tagwise sites map with a pin for each site" width="100%"></td>
+    <td width="50%"><img src="https://raw.githubusercontent.com/MooketsiMagwaza/MooketsiMagwaza/main/assets/tagwise/tagwise-phone-home.webp" alt="Tagwise home screen in an iPhone frame" width="100%"></td>
+    <td width="50%"><img src="https://raw.githubusercontent.com/MooketsiMagwaza/MooketsiMagwaza/main/assets/tagwise/tagwise-phone-register.webp" alt="Tagwise asset register in an iPhone frame" width="100%"></td>
   </tr>
 </table>
 
@@ -188,12 +177,12 @@ totals and focus tools.
 
 <table>
   <tr>
-    <td width="50%"><img src="https://raw.githubusercontent.com/MooketsiMagwaza/MooketsiMagwaza/main/assets/university-cs-docs/home.webp" alt="University CS Docs home page with computer-science course cards" width="100%"></td>
-    <td width="50%"><img src="https://raw.githubusercontent.com/MooketsiMagwaza/MooketsiMagwaza/main/assets/university-cs-docs/course.webp" alt="A University CS Docs course overview with its study sequence" width="100%"></td>
+    <td width="50%"><img src="https://raw.githubusercontent.com/MooketsiMagwaza/MooketsiMagwaza/main/assets/university-cs-docs/functional-overview.webp" alt="CSI243 Functional Programming course overview" width="100%"></td>
+    <td width="50%"><img src="https://raw.githubusercontent.com/MooketsiMagwaza/MooketsiMagwaza/main/assets/university-cs-docs/functional-thinking.webp" alt="Functional Thinking notes with a Haskell code example" width="100%"></td>
   </tr>
   <tr>
-    <td width="50%"><img src="https://raw.githubusercontent.com/MooketsiMagwaza/MooketsiMagwaza/main/assets/university-cs-docs/semester.webp" alt="University CS Docs semester overview" width="100%"></td>
-    <td width="50%"><img src="https://raw.githubusercontent.com/MooketsiMagwaza/MooketsiMagwaza/main/assets/university-cs-docs/focus-timer.webp" alt="University CS Docs focus timer" width="100%"></td>
+    <td width="50%"><img src="https://raw.githubusercontent.com/MooketsiMagwaza/MooketsiMagwaza/main/assets/university-cs-docs/haskell-playground.webp" alt="Browser-based Haskell playground" width="100%"></td>
+    <td width="50%"><img src="https://raw.githubusercontent.com/MooketsiMagwaza/MooketsiMagwaza/main/assets/university-cs-docs/functional-review.webp" alt="Functional Programming review with flashcards" width="100%"></td>
   </tr>
 </table>
 
@@ -205,27 +194,6 @@ reusable MDX components so contributors can add content without rebuilding the p
 - Public contribution guidance and project governance alongside the course material.
 - GitHub Actions, CodeQL and dependency review on changes.
 - Open-source repository: [MooketsiMagwaza/university-cs-docs](https://github.com/MooketsiMagwaza/university-cs-docs).
-
-## Technical toolkit
-
-| Area | Tools I use |
-| --- | --- |
-| Backend | Rust, Axum, Python, FastAPI, Go, Java, REST APIs |
-| Web | TypeScript, React, Next.js, Vite, accessible responsive UI |
-| Data | PostgreSQL, PostGIS, pgRouting, Redis, SQLAlchemy, sqlx, Alembic |
-| Operations | Docker, nginx, GitHub Actions, Prometheus, Grafana, Tempo, OpenTelemetry |
-| Native | Tauri 2, Rust, Windows APIs, WebView2 |
-
-## How I work
-
-1. Start with the user journey and the facts the system must preserve.
-2. Give data and service boundaries explicit owners.
-3. Treat authentication, validation, rate limits, and failure states as product
-   work—not a cleanup phase.
-4. Document what is working, what is scaffolded, and what evidence is still
-   needed before launch.
-5. Prefer a small, understandable system until measured load justifies more
-   infrastructure.
 
 ## Let's talk
 
