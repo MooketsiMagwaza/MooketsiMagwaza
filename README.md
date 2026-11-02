@@ -11,7 +11,7 @@ Based in **Gaborone, Botswana**. Open to backend, full-stack, and platform-focus
 opportunities.
 
 [Portfolio](https://mooketsimagwaza.github.io/portfolio/) ·
-[Project CV (PDF)](https://mooketsimagwaza.github.io/portfolio/Mooketsi-Magwaza-CV.pdf) ·
+[CV (PDF)](https://mooketsimagwaza.github.io/portfolio/Mooketsi-Magwaza-CV.pdf) ·
 [Email me](mailto:mooketsimagwazajr@gmail.com) ·
 [View my repositories](https://github.com/MooketsiMagwaza?tab=repositories)
 
