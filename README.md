@@ -39,48 +39,6 @@ opportunities.
 
 ## Selected work
 
-### [Kori — an offline-first safari and wildlife app for Botswana](https://github.com/MooketsiMagwaza/kori)
-
-<table>
-  <tr>
-    <td><img src="https://raw.githubusercontent.com/MooketsiMagwaza/MooketsiMagwaza/main/assets/kori/kori-flow.webp" alt="Kori's offline field flow shown across Home, Log a sighting, and Sightings iPhone screens" width="100%"></td>
-  </tr>
-</table>
-
-Kori addresses two Botswana-specific constraints that ordinary map and social apps
-handle poorly: safari routes lose mobile coverage, and publishing an animal's exact live
-location can be unsafe. It records a sighting offline, keeps it on the phone until a
-connection returns, and separates a private observation from the delayed, coarse area
-that may safely be shared. The private Savuti map pack and its screenshots remain off the
-web while the relevant wildlife authority is consulted.
-
-- **Safety and privacy by design.** No live animal locations: others see a sighting only
-  after review and a delay, as an area. Sensitive species are shown coarsely and are
-  never guided to. GPS trip recording is opt-in per trip, trimmed, delayed, and deletable.
-- **Four web apps.** A phone-first field app (an IndexedDB outbox, a downloaded park pack
-  drawn locally from PMTiles with MapLibre, routing along tracks only, QR share and scan), a
-  landing site, a review console, and an API docs site generated from the service's
-  OpenAPI document.
-- **A real offline map, privately verified.** The Savuti pack combines an OpenStreetMap
-  vector base and routing graph with Sentinel-2 satellite imagery. Its satellite-first
-  view, OSM-track routing, attribution, pack storage, and offline reload passed 16 of 16
-  automated checks. The pack and its screenshots are not published.
-- **A real backend.** A Python service with accounts, scoped API keys and quotas,
-  throttling, an audit log, uploads, a review flow, trips and a track map, and 13 database
-  migrations on PostGIS. It has 93 passing tests and runs in CI against a PostGIS service.
-  The apps do not call it yet, so the data in them stays on the device.
-- **Operations included.** Backups, a standby and a restore drill, monitoring
-  dashboards, tracing, and a Trivy and dependency-audit workflow.
-
-| Layer | What it uses |
-| --- | --- |
-| Front end | Next.js 16, React 19, TypeScript, MapLibre, IndexedDB, jsQR |
-| API | Python 3.12, FastAPI, SQLAlchemy 2, GeoAlchemy2, Alembic, a scheduler |
-| Auth and files | GoTrue (an open-source auth server), MinIO object storage |
-| Data | PostgreSQL 16 with PostGIS, a standby, scheduled backups, a restore drill |
-| Observability | OpenTelemetry, Prometheus, Grafana, Tempo, a Postgres exporter |
-| Delivery | Docker Compose, GitHub Actions, Trivy, Dependabot |
-
 ### [Tagwise — a shared register for an organisation's assets and stock](https://github.com/MooketsiMagwaza/tagwise)
 
 <table>
@@ -133,6 +91,48 @@ organisation shown in the product is a fictional sample.
 | Observability | OpenTelemetry, Prometheus, Grafana, Tempo; a request ID in every log line |
 | Docs | Fumadocs, with an OpenAPI reference generated from the services |
 | Delivery | GitHub Actions (lint, type-check, tests, build, compose validation, database tests), Dependabot |
+
+### [Kori — an offline-first safari and wildlife app for Botswana](https://github.com/MooketsiMagwaza/kori)
+
+<table>
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/MooketsiMagwaza/MooketsiMagwaza/main/assets/kori/kori-flow.webp" alt="Kori's offline field flow shown across Home, Log a sighting, and Sightings iPhone screens" width="100%"></td>
+  </tr>
+</table>
+
+Kori addresses two Botswana-specific constraints that ordinary map and social apps
+handle poorly: safari routes lose mobile coverage, and publishing an animal's exact live
+location can be unsafe. It records a sighting offline, keeps it on the phone until a
+connection returns, and separates a private observation from the delayed, coarse area
+that may safely be shared. The private Savuti map pack and its screenshots remain off the
+web while the relevant wildlife authority is consulted.
+
+- **Safety and privacy by design.** No live animal locations: others see a sighting only
+  after review and a delay, as an area. Sensitive species are shown coarsely and are
+  never guided to. GPS trip recording is opt-in per trip, trimmed, delayed, and deletable.
+- **Four web apps.** A phone-first field app (an IndexedDB outbox, a downloaded park pack
+  drawn locally from PMTiles with MapLibre, routing along tracks only, QR share and scan), a
+  landing site, a review console, and an API docs site generated from the service's
+  OpenAPI document.
+- **A real offline map, privately verified.** The Savuti pack combines an OpenStreetMap
+  vector base and routing graph with Sentinel-2 satellite imagery. Its satellite-first
+  view, OSM-track routing, attribution, pack storage, and offline reload passed 16 of 16
+  automated checks. The pack and its screenshots are not published.
+- **A real backend.** A Python service with accounts, scoped API keys and quotas,
+  throttling, an audit log, uploads, a review flow, trips and a track map, and 13 database
+  migrations on PostGIS. It has 93 passing tests and runs in CI against a PostGIS service.
+  The apps do not call it yet, so the data in them stays on the device.
+- **Operations included.** Backups, a standby and a restore drill, monitoring
+  dashboards, tracing, and a Trivy and dependency-audit workflow.
+
+| Layer | What it uses |
+| --- | --- |
+| Front end | Next.js 16, React 19, TypeScript, MapLibre, IndexedDB, jsQR |
+| API | Python 3.12, FastAPI, SQLAlchemy 2, GeoAlchemy2, Alembic, a scheduler |
+| Auth and files | GoTrue (an open-source auth server), MinIO object storage |
+| Data | PostgreSQL 16 with PostGIS, a standby, scheduled backups, a restore drill |
+| Observability | OpenTelemetry, Prometheus, Grafana, Tempo, a Postgres exporter |
+| Delivery | Docker Compose, GitHub Actions, Trivy, Dependabot |
 
 ### [Opaline — a local-first productivity workspace for Windows](https://github.com/MooketsiMagwaza/opaline)
 
